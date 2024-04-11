@@ -1,0 +1,163 @@
+/* App */
+.home_app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_app_logo {
+    width: 15vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/favicons/fav_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 0 5vh 0;
+}
+
+.home_app_text {
+    height: 15vh;
+    text-align: center;
+	text-transform: uppercase;
+	font: 1.2vw Rubik-Medium;
+}
+
+.home_app_st {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_app_st_text_1,
+.home_app_st_text_2,
+.home_app_st_text_3 {
+    height: auto;
+    text-align: center;
+	text-transform: uppercase;
+	font: 1vw Rubik-Medium;
+    margin: 0 0 1vh 0;
+}
+
+.home_app_st_text_1:hover,
+.home_app_st_text_2:hover,
+.home_app_st_text_3:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+/* Models */
+.models_panel {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.models_panel_text {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.models_panel_text_A,
+.models_panel_text_B {
+    height: 5vh;
+    text-align: center;
+	text-transform: uppercase;
+	font: 1.2vw Rubik-Medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.models_panel_text_A:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.models_panel_use {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.models_panel_use::-webkit-scrollbar {
+	display: flex;
+}
+
+.models_panel_use::-webkit-scrollbar-thumb {
+	background-color: rgba(221, 170, 29, 1);
+	box-shadow: 0px 0px 0px rgba(221, 170, 29, 1) inset;
+}
+
+.models_panel_use_A {
+    width: 100%;
+    height: 72vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.models_panel_use_A_panel {
+    width: 80%;
+    height: 20vh;
+    border-width: 0.4vw;
+    border: solid rgb(255, 165, 0);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 5vh 0;
+}
+
+.models_panel_use_A_panel_text {
+    height: auto;
+    text-align: center;
+	text-transform: uppercase;
+	font: 1vw Rubik-Regular;
+}
+
+.models_panel_use_A_panel_left {
+    width: 28%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.models_panel_use_A_panel_right {
+    width: 68%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    user-select: text;
+}
+
+.models_panel_use_B {
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,201 @@
+#app,
+#Error404,
+#Error500 {
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	flex-direction: column;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	scroll-behavior: smooth;
+	image-rendering: crisp-edges;
+	transition: 0.5s;
+}
+
+html {
+	min-height: 100%;
+	transition: 0.5s;
+	cursor: default;
+	user-select: none;
+	image-rendering: crisp-edges;
+}
+
+body {
+	background-color: rgb(15, 17, 25);
+	color: rgb(255, 255, 255);
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	font: 1em Rubik-Regular;
+	font-style: normal;
+	transition: 0.5s;
+	image-rendering: auto;
+}
+
+p {
+	margin: 1em 0;
+	font: 1em Rubik-Regular;
+	transition: 0.5s;
+}
+
+a {
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255, 255, 255, 8);
+	transition: 0.5s;
+}
+
+img {
+	margin: 0% 3%;
+	border-radius: 15px;
+	user-select: none;
+	transition: 0.5s;
+}
+
+iframe {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+select {
+	outline: none;
+}
+
+option {
+	border-radius: 15px;
+	background-color: rgb(23, 25, 30);
+	color: rgb(255, 255, 255);
+	border: 0px solid;
+	text-align: center;
+	text-transform: uppercase;
+	font: 1.2vw Rubik-Regular;
+}
+
+/* Шрифт */
+
+@font-face {
+	font-family: "Rubik-Light";
+	src: url(../fonts/Rubik/static/Rubik-Light.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Rubik-Regular";
+	src: url(../fonts/Rubik/static/Rubik-Regular.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Rubik-Medium";
+	src: url(../fonts/Rubik/static/Rubik-Medium.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Rubik-Bold";
+	src: url(../fonts/Rubik/static/Rubik-Bold.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Rubik-BoldItalic";
+	src: url(../fonts/Rubik/static/Rubik-BoldItalic.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* scroll */
+
+::-webkit-scrollbar-button {
+	width: 6px;
+	height: 0px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(38, 38, 38, 0.8);
+	box-shadow: 0px 0px 3px rgba(38, 38, 38, 0.8) inset;
+	display: none;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 50px;
+	background-color: rgba(160, 17, 138, 1);
+	box-shadow: 0px 0px 0px rgba(0, 190, 117, 0) inset;
+}
+
+::-webkit-resizer {
+	width: 7px;
+	height: 6px;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	transition: 0.5s;
+	display:  flex;
+}
+
+/* Всплывающая подсказка */
+input::placeholder {
+	color: rgba(255, 255, 255, 5);
+}
+
+[contenteditable]:empty:before {
+	content: attr(data-placeholder);
+	color: rgba(255, 255, 255, 5);
+	display: inline-block;
+}
+
+[data-tooltip] {
+	position: relative;
+}
+
+[data-tooltip]::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	padding: 0.4em 1em;
+	border: 2px solid rgb(0, 204, 255);
+	pointer-events: none;
+	opacity: 0;
+	font: 0.8vw Rubik-Bold;
+	text-transform: uppercase;
+	white-space: normal;
+	z-index: 99999;
+}
+
+[data-tooltip]:hover::after {
+	opacity: 1;
+	top: 4em;
+}
+
+/* цвет выделения текста */
+
+::selection {
+	background: rgba(0, 190, 116, 0.8);
+	border-radius: 15px;
+	padding: 0% 2%;
+}
+
+::-moz-selection {
+	background: rgba(0, 190, 116, 0.8);
+	border-radius: 15px;
+}
