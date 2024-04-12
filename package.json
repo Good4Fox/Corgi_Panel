@@ -12,19 +12,23 @@
     "test": "vite build && node server.mjs | pino-pretty"
   },
   "dependencies": {
+    "@fastify/postgres": "^5.2.2",
     "@fastify/static": "^6.12.0",
-    "fastify": "^4.25.2",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.2",
+    "figlet": "^1.7.0",
     "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
     "pino-pretty": "^10.3.1",
     "sirv": "^2.0.4",
-    "ts-node": "^10.9.2",
-    "figlet": "^1.7.0"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/figlet": "^1.5.8",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@tsconfig/svelte": "^5.0.2",
+    "@types/bun": "latest",
+    "@types/figlet": "^1.5.8",
     "@types/node": "^20.11.17",
     "svelte": "^4.2.8",
     "svelte-check": "^3.6.2",

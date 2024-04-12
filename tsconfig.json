@@ -3,6 +3,6 @@
   "include": [
     "app/**/*", 
     "server.mjs"
-  ],
+, "db.js"  ],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
 }

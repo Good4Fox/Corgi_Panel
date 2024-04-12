@@ -3,11 +3,13 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { registerRoutes } from './app/routes.js'
 import { registerStatic } from './app/static.js'
+import { dataBase } from './db.js'
 
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = fastify({ logger: true, disableRequestLogging: true })
 
+dataBase(app, __dirname)
 
 registerStatic(app, __dirname)
 registerRoutes(app, __dirname)

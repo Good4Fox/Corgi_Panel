@@ -5,14 +5,13 @@ function handleClick_1() {
     smoothURL('/models')
 }
 function handleClick_2() {
-
+    alert( "Чтобы добавить модель, используйте следующую ссылку для POST запроса: localhost:3000/api/models.\n\nВыполните запрос, указав следующие поля:\n\n- id: число\n- name: строка\n- description: строка\n- context_length: число\n- tokenizer: строка\n- modality: строка." );
 }
 function handleClick_3() {
-
+    smoothURL('/api/models/1')
 }
 
 </script>
-
 
 <div class="home_app">
     <div class="home_app_logo"></div>

@@ -1,34 +1,30 @@
 <script lang="ts">
+import { onMount } from 'svelte'
+import type { Data } from '../../ts/data'
 
-import { onMount } from 'svelte';
-import type { Data } from '../../ts/data';
-
-let data: Data[] = [];
-let error: string = '';
+let data: Data[] = []
+let error: string = ''
 
 async function fetchData() {
     try {
-        // https://your-api-url.com/data
-        const response = await fetch('https://openrouter.ai/api/v1/models');
+        const response = await fetch('http://localhost:3000/api/models')
         if (!response.ok) {
-            throw new Error('Failed to fetch');
+            throw new Error('Failed to fetch')
         }
-        const jsonResponse = await response.json();
-        data = jsonResponse.data;
+        data = await response.json()
         console.log(data)
-    } catch (e: unknown) {
+    } catch (e) {
         if (e instanceof Error) {
-            error = e.message;
+            error = e.message
         } else {
-            error = 'An unknown error occurred';
+            error = 'An unknown error occurred'
         }
     }
 }
 
 onMount(() => {
-    fetchData();
-});
-
+    fetchData()
+})
 </script>
 
 <div class="models_panel_use_A">
@@ -70,19 +66,19 @@ onMount(() => {
                         {/if}
                     </div>
         
-                    <div class="models_panel_use_A_panel_text" data-tooltip="{item?.architecture.tokenizer}">
-                        {#if item?.architecture.tokenizer?.toString().length > 256}
-                            {item.architecture.tokenizer.toString().slice(0, 256) + "..."}
+                    <div class="models_panel_use_A_panel_text" data-tooltip="{item?.tokenizer}">
+                        {#if item?.tokenizer?.toString().length > 256}
+                            {item.tokenizer.toString().slice(0, 256) + "..."}
                         {:else}
-                            {item.architecture.tokenizer}
+                            {item.tokenizer}
                         {/if}
                     </div>
         
-                    <div class="models_panel_use_A_panel_text" data-tooltip="{item?.architecture.modality}">
-                        {#if item?.architecture.modality?.toString().length > 256}
-                            {item.architecture.modality.toString().slice(0, 256) + "..."}
+                    <div class="models_panel_use_A_panel_text" data-tooltip="{item?.modality}">
+                        {#if item?.modality?.toString().length > 256}
+                            {item.modality.toString().slice(0, 256) + "..."}
                         {:else}
-                            {item.architecture.modality}
+                            {item.modality}
                         {/if}
                     </div>
                 </div>
